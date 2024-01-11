@@ -18,10 +18,8 @@ export const Swhome = () => {
 
 	<div className="text-center mt-5">
 
-        {people.map((item) => <p> {item.name} </p> )}
+        {people.map((item) => < Character key={item.name} name= {item.name} /> )}
 
-		< Character name= "props 1" />
-        < Character name= "props 2" />
 	</div>
     
 );
