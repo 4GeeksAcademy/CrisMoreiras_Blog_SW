@@ -12,6 +12,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
+			],
+
+			characters: [
+				{
+					name: "FIRST",
+					background: "white1",
+					initial: "blue"	
+				},
+				{
+					name: "SECOND",
+					background: "white2",
+					initial: "GREEN"	
+				}
 			]
 		},
 		actions: {
@@ -23,6 +36,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
+				console.log("se carga desde flux")
+				fetch ("https://www.swapi.tech/api/people")
+        		.then ((response)=>response.json())
+        		.then ((data)=>setStore({characters:data.results}))
 			},
 			changeColor: (index, color) => {
 				//get the store
