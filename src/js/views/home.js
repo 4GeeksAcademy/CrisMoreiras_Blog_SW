@@ -1,15 +1,26 @@
-import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
+import React, {useEffect, useState} from "react";
 import "../../styles/home.css";
 
-export const Home = () => (
+import { Character } from "../component/character";
+
+export const Home = () => {
+
+    const [people, setPeople] = useState ([])
+
+    useEffect ( () =>{
+        console.log ("cargo home")
+        fetch ("https://www.swapi.tech/api/people")
+        .then ((response)=>response.json())
+        .then ((data)=>setPeople(data.results))
+    } ,[])
+
+    return (
+
 	<div className="text-center mt-5">
-		<h1>Hello Rigo!</h1>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<a href="#" className="btn btn-success">
-			If you see this green button, bootstrap is working
-		</a>
+
+        {people.map((item) => < Character key={item.name} name= {item.name} /> )}
+
 	</div>
+    
 );
+}
