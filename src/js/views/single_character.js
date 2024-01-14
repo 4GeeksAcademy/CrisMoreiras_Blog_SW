@@ -6,6 +6,7 @@ import { Context } from "../store/appContext";
 export const Single_character = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
+
 	return (
 		<div className="jumbotron">
 			<h1 className="display-4">CHARACTER This will show the demo element: {params.character_id}</h1>

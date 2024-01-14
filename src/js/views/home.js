@@ -4,7 +4,6 @@ import "../../styles/home.css";
 import { Context } from "../store/appContext";
 
 
-
 export const Home = () => {
 
 	const { store, actions } = useContext(Context);
@@ -14,7 +13,7 @@ export const Home = () => {
 	<div className="text-center mt-5">
 
 		<h1>Desde Flux</h1>
-        {store.characters.map((item) => < Character key={item.name} name= {item.name} /> )}
+        {store.characters.map((item) => < Character key={item.uid} uid={item.uid} name= {item.name} /> )}
 
 	</div>
     

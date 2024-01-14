@@ -15,16 +15,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 
 			characters: [
-				{
-					name: "FIRST",
-					background: "white1",
-					initial: "blue"	
-				},
-				{
-					name: "SECOND",
-					background: "white2",
-					initial: "GREEN"	
-				}
+				
 			]
 		},
 		actions: {
