@@ -8,6 +8,7 @@ import { Single } from "./views/single";
 
 import { Characters } from "./component/characters";
 import { Single_character } from "./views/single_character";
+import { Single_planet } from "./views/single_planet";
 import { Planets } from "./views/planets";
 import { Vehicles } from "./views/vehicles";
 
@@ -36,6 +37,7 @@ const Layout = () => {
 						<Route path="/characters" element={<Characters />} />
 						<Route path="/single_character/:character_id" element={<Single_character />} />
 						<Route path="/planets" element={<Planets />} />
+						<Route path="/single_planet/:planet_id" element={<Single_planet />} />
 						<Route path="/vehicles" element={<Vehicles />} />
 
 						<Route path="*" element={<h1>Not found!</h1>} />

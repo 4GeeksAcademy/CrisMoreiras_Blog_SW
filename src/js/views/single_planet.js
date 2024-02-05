@@ -3,18 +3,17 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const Single_character = props => {
+export const Single_planet = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 
-	const [character, setCharacter]=useState({})
+	const [planet, setPlanet]=useState({})
 
 	useEffect (()=>{
 
-		console.log("se carga personaje")
-			fetch ("https://www.swapi.tech/api/people/" + params.character_id)
+			fetch ("https://www.swapi.tech/api/planets/" + params.planet_id)
         	.then ((response)=>response.json())
-        	.then ((data)=>setCharacter(data.result.properties))
+        	.then ((data)=>setPlanet(data.result.properties))
 
 	},[])
 
@@ -29,12 +28,11 @@ export const Single_character = props => {
   				</div>
   				<div className="col-md-6">
 					<div className="card-body text-center">
-	  					<h3 className="card-title">{character.name}</h3>
-						<p className="card-text">Gender: {character.gender}</p>
-	  					<p className="card-text">Birth year: {character.birth_year}</p>
-						<p className="card-text">Height: {character.height}</p>
-						<p className="card-text">Eye color: {character.eye_color}</p>
-						<p className="card-text">Hair color: {character.hair_color}</p>	
+	  					<h3 className="card-title">{planet.name}</h3>
+						<p className="card-text">Climate: {planet.climate}</p>
+	  					<p className="card-text">Diameter: {planet.diameter}</p>
+                        <p className="card-text">Gravity: {planet.gravity}</p>
+                        <p className="card-text">Population: {planet.population}</p>
 					</div>
   				</div>
 				<div>
@@ -44,9 +42,9 @@ export const Single_character = props => {
 		</div>
 		</div>
 		<div className="container text-center">
-			<Link to="/characters">
+			<Link to="/planets">
 				<span className="btn btn-md mb-4 mx-2" style={{background: "#FFD369"}} href="#" role="button">
-					Back Characters
+					Back Planets
 				</span>
 			</Link>
 			<button
@@ -59,6 +57,6 @@ export const Single_character = props => {
 	);
 };
 
-Single_character.propTypes = {
+Single_planet.propTypes = {
 	match: PropTypes.object
 };
