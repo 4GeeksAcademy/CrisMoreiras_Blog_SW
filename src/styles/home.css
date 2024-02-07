@@ -1,0 +1,26 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+
+@font-face {
+    font-family: "Star Wars";
+    src: url("../styles/fonts/Star Wars.ttf") format('truetype');
+  }
+
+.img-home {
+    display:block;
+    margin:auto;
+    height: 500px;
+    width: auto;
+    padding: 20px;
+    position: relative; 
+}
+
+.text-link {
+    font-family: "Star Wars",  sans-serif;
+    font-size: 30px;
+    color: #FFE81F;
+    position: absolute;
+    top: 10%;
+    left: 26%;
+    transform: translate(-10%, -10%);
+    
+}

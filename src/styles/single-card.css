@@ -1,0 +1,17 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+
+@font-face {
+    font-family: "Star Wars";
+    src: url("../styles/fonts/Star Wars.ttf") format('truetype');
+  }
+
+.single-card {
+    background-color: #B2B1B9;
+    border-color: #FFE81F;
+    font-family: "Star Wars",  sans-serif;
+
+}
+
+.card-text {
+  font-family: Helvetica, sans-serif;
+}

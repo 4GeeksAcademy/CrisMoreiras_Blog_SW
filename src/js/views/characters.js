@@ -1,6 +1,9 @@
 import React, {useEffect, useState, useContext} from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
+import "../../styles/buttons.css"
+import "../../styles/index.css"
+import "../../styles/single-card.css"
 
 export const Characters = () => {
 
@@ -14,15 +17,15 @@ export const Characters = () => {
                 {store.characters.map((item, index) => (
             
                 <div className="col" key={item.uid}>
-		            <div className="card" style={{width: "18rem", background: "#C7C8CC"}}>
+		            <div className="card single-card" style={{width: "18rem"}}>
                         <img src={`https://picsum.photos/100?random=${item.uid}`} className="card-img-top" alt="..."/>
                         <div className="card-body text-center">
                         <h5 className="card-title">{item.name}</h5>
-                        <Link className="btn btn-sm mx-1" style={{background: "#FFD369"}} to={"/single_character/" + item.uid}>
+                        <Link className="btn btn-sm btn-SW-S" to={"/single_character/" + item.uid}>
 					        <span>More</span>
 				        </Link>
                         <button
-                            className="btn btn-sm mx-1" style={{background: "#FFD369"}}>
+                            className="btn btn-sm btn-SW-S">
 				            Like!
                         </button>
                         </div>

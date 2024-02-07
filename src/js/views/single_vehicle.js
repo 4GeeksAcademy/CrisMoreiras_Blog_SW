@@ -6,18 +6,17 @@ import "../../styles/buttons.css"
 import "../../styles/index.css"
 import "../../styles/single-card.css"
 
-export const Single_character = props => {
+export const Single_vehicle = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 
-	const [character, setCharacter]=useState({})
+	const [vehicle, setVehicle]=useState({})
 
 	useEffect (()=>{
 
-		console.log("se carga personaje")
-			fetch ("https://www.swapi.tech/api/people/" + params.character_id)
+			fetch ("https://www.swapi.tech/api/vehicles/" + params.vehicle_id)
         	.then ((response)=>response.json())
-        	.then ((data)=>setCharacter(data.result.properties))
+        	.then ((data)=>setVehicle(data.result.properties))
 
 	},[])
 
@@ -32,13 +31,12 @@ export const Single_character = props => {
   				</div>
   				<div className="col-md-6">
 					<div className="card-body text-center">
-	  					<h3 className="card-title">{character.name}</h3>
+	  					<h3 className="card-title">{vehicle.name}</h3>
 						<br/>
-						<h5 className="card-text">Gender: {character.gender}</h5>
-	  					<h5 className="card-text">Birth year: {character.birth_year}</h5>
-						<h5 className="card-text">Height: {character.height}</h5>
-						<h5 className="card-text">Eye color: {character.eye_color}</h5>
-						<h5 className="card-text">Hair color: {character.hair_color}</h5>	
+						<h5 className="card-text">Vehicle Class: {vehicle.vehicle_class}</h5>
+						<h5 className="card-text">Cargo Capacity: {vehicle.cargo_capacity}</h5>
+						<h5 className="card-text">Consumables: {vehicle.consumables}</h5>
+						<h5 className="card-text">Manufacturer: {vehicle.manufacturer}</h5>		
 					</div>
   				</div>
 				<div>
@@ -48,9 +46,9 @@ export const Single_character = props => {
 		</div>
 		</div>
 		<div className="container text-center">
-			<Link to="/characters">
+			<Link to="/vehicles">
 				<span className="btn btn-md mb-4 btn-SW" href="#" role="button">
-					Back Characters
+					Back Vehicles
 				</span>
 			</Link>
 			<button
@@ -63,6 +61,6 @@ export const Single_character = props => {
 	);
 };
 
-Single_character.propTypes = {
+Single_vehicle.propTypes = {
 	match: PropTypes.object
 };
