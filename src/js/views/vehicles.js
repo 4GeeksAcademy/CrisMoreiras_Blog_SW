@@ -25,6 +25,7 @@ export const Vehicles = () => {
 					        <span>More</span>
 				        </Link>
                         <button
+                            onClick={() => actions.favVehicles(item.name)}
                             className="btn btn-sm btn-SW-S">
 				            Like!
                         </button>

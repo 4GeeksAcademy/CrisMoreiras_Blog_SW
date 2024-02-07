@@ -51,10 +51,6 @@ export const Single_vehicle = props => {
 					Back Vehicles
 				</span>
 			</Link>
-			<button
-                className="btn btn-md mb-4 btn-SW">
-				Like!
-            </button>
 		</div>
 		
 		</>

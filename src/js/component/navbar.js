@@ -27,7 +27,7 @@ export const Navbar = () => {
 				<Link to="/vehicles">
 					<button className="btn btn-md btn-SW">Vehicles</button>
 				</Link>
-				<Link to="/">
+				<Link to="/favorites">
 					<button className="btn btn-md btn-SW">My Favorites</button>
 				</Link>
 				</div>

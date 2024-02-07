@@ -19,9 +19,9 @@ export const Single_planet = props => {
 
 	return (
 		<>
-		<div className="container" style={{background: "#B4B4B8"}}>
+		
 		<div className="container d-flex justify-content-center">
-		<div className="card my-4" style={{width: "800px", background: "#C7C8CC"}}>
+		<div className="card my-4 single-card" style={{width: "800px"}}>
 			<div className="row g-0">
   				<div className="col-md-6">
 					<img src="https://picsum.photos/440/250" className="img-fluid rounded m-3 w-auto" alt="..."/>
@@ -29,10 +29,11 @@ export const Single_planet = props => {
   				<div className="col-md-6">
 					<div className="card-body text-center">
 	  					<h3 className="card-title">{planet.name}</h3>
-						<p className="card-text">Climate: {planet.climate}</p>
-	  					<p className="card-text">Diameter: {planet.diameter}</p>
-                        <p className="card-text">Gravity: {planet.gravity}</p>
-                        <p className="card-text">Population: {planet.population}</p>
+						<br/>
+						<h5 className="card-text">Climate: {planet.climate}</h5>
+	  					<h5 className="card-text">Diameter: {planet.diameter}</h5>
+                        <h5 className="card-text">Gravity: {planet.gravity}</h5>
+                        <h5 className="card-text">Population: {planet.population}</h5>
 					</div>
   				</div>
 				<div>
@@ -43,16 +44,12 @@ export const Single_planet = props => {
 		</div>
 		<div className="container text-center">
 			<Link to="/planets">
-				<span className="btn btn-md mb-4 mx-2" style={{background: "#FFD369"}} href="#" role="button">
+				<span className="btn btn-md mb-4 btn-SW" href="#" role="button">
 					Back Planets
 				</span>
 			</Link>
-			<button
-                className="btn btn-md mb-4 mx-2" style={{background: "#FFD369"}}>
-				Like!
-            </button>
 		</div>
-		</div>
+		
 		</>
 	);
 };

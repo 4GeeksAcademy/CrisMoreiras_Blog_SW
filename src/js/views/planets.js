@@ -25,6 +25,7 @@ export const Planets = () => {
 					        <span>More</span>
 				        </Link>
                         <button
+                            onClick={() => actions.favPlanets(item.name)}
                             className="btn btn-sm btn-SW-S">
 				            Like!
                         </button>

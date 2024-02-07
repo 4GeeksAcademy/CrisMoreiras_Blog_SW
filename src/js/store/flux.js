@@ -20,11 +20,49 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			vehicles: [],
 
+			favCharacters: [],
+
+			favPlanets: [],
+
+			favVehicles: [],
+
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
+
+			favCharacters: (nameFav) => {
+
+				const store = getStore();
+
+				if (store.favCharacters.includes(nameFav)) {
+					setStore({ favCharacters: store.favCharacters.filter((repetido) => repetido != nameFav) });
+				}
+				else {
+					setStore({ favCharacters: [...store.favCharacters, nameFav] });
+				}
+			},
+
+			favPlanets: (nameFav) => {
+
+				const store = getStore();
+
+				if (store.favPlanets.includes(nameFav)) {
+					setStore({ favPlanets: store.favPlanets.filter((repetido) => repetido != nameFav) });
+				}
+				else {
+					setStore({ favPlanets: [...store.favPlanets, nameFav] });
+				}
+			},
+
+			favVehicles: (nameFav) => {
+
+				const store = getStore();
+
+				if (store.favVehicles.includes(nameFav)) {
+					setStore({ favVehicles: store.favVehicles.filter((repetido) => repetido != nameFav) });
+				}
+				else {
+					setStore({ favVehicles: [...store.favVehicles, nameFav] });
+				}
 			},
 
 			loadSomeData: () => {

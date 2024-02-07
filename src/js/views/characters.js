@@ -25,6 +25,7 @@ export const Characters = () => {
 					        <span>More</span>
 				        </Link>
                         <button
+                            onClick={() => actions.favCharacters(item.name)} 
                             className="btn btn-sm btn-SW-S">
 				            Like!
                         </button>

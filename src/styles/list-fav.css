@@ -1,0 +1,23 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+
+@font-face {
+    font-family: "Star Wars";
+    src: url("../styles/fonts/Star Wars.ttf") format('truetype');
+  }
+
+
+.list-fav{
+    display:flex;
+    background-color: #B2B1B9;
+    border-color: #FFE81F;
+}
+
+h4 {
+    font-family: "Star Wars",  sans-serif;
+    font-size: 20px;
+    color: #FFE81F;
+}
+
+h5 {
+    font-family: Helvetica, sans-serif;
+}

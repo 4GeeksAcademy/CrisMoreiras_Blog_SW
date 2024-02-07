@@ -53,12 +53,7 @@ export const Single_character = props => {
 					Back Characters
 				</span>
 			</Link>
-			<button
-                className="btn btn-md mb-4 btn-SW">
-				Like!
-            </button>
 		</div>
-		
 		</>
 	);
 };

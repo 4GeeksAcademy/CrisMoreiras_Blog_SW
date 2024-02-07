@@ -10,6 +10,7 @@ import { Planets } from "./views/planets";
 import { Single_planet } from "./views/single_planet";
 import { Vehicles } from "./views/vehicles";
 import { Single_vehicle } from "./views/single_vehicle";
+import { Favorites } from "./views/favorites";
 
 import injectContext from "./store/appContext";
 
@@ -36,6 +37,7 @@ const Layout = () => {
 						<Route path="/single_planet/:planet_id" element={<Single_planet />} />
 						<Route path="/vehicles" element={<Vehicles />} />
 						<Route path="/single_vehicle/:vehicle_id" element={<Single_vehicle />} />
+						<Route path="/favorites" element={<Favorites />} />
 
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
